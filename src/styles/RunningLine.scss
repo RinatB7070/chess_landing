@@ -1,0 +1,30 @@
+.running_line {
+  background-color: #F54932;
+  margin-bottom: 80px;
+  padding: 18px 0;
+  @include merryFont(22px, 300, 110%);
+  .running_line_anim {
+    display: flex;
+    color: #ffffff;
+    text-transform: uppercase;
+    animation: text 9.5s infinite linear;
+    p {
+      display: flex;
+      white-space: nowrap;
+    }
+    img {
+      display: block;
+      margin: 10px;
+    }
+  }
+
+}
+@keyframes text {
+  0%{
+    transform: translate(0, 0);
+  }
+  
+  100%{
+    transform: translate(-100%, 0);
+  }
+}

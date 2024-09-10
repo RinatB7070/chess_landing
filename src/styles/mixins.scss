@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap');
+
+$mobile: 480px;
+$tablet: 960px;
+$desktop: 1280px;
+
+@mixin merryFont ($size, $weight, $height) {
+  font-family: "Merriweather", serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+@mixin golosFont ($size, $weight, $height) {
+  font-family: "Golos Text", sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+  line-height: $height;
+}
+@mixin respond-to($media) {
+  @if $media == small-mobile {
+    @media (max-width: $mobile) { @content; }
+  }
+  @else if $media == mobile {
+    @media (max-width: $mobile ) { @content; }
+  }
+  @else if $media == tablet {
+    @media (max-width: $tablet ){ @content; }
+  }
+  @else if $media == desktop {
+    @media (max-width: $desktop) { @content; }
+  }
+}

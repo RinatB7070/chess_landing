@@ -1,0 +1,9 @@
+.footer {
+  height: 150px;
+  background-color: #E9DED4;
+  padding-top: 14px;
+  p {
+    @include golosFont (16px, 300, 120%);
+    opacity: 60%;
+  }
+}

@@ -1,0 +1,115 @@
+@import './mixins.scss';
+
+.members {
+  position: relative;
+}
+.members__header {
+  margin-bottom: 60px;
+  text-transform: uppercase;
+  @include merryFont(54px, 300, 120%);
+}
+.members__buttons {
+  position: absolute;
+  right: 75px;
+  top: 38px;
+  display: flex;
+  align-items: center;
+  @include respond-to(mobile) {
+    position: static;
+    justify-content: center;
+  }
+  .members__buttons__left {
+    height: 44px;
+    width: 44px;
+    border: none;
+    background-color: inherit;
+    background-image: url('../../public/assets/AppMembers/btn_left.svg');
+    margin-right: 14px;
+    &:hover {
+      background-image: url('../../public/assets/AppMembers/btn_left_hover.svg');
+    }
+  }
+  .members__buttons__left-disabled {
+    height: 44px;
+    width: 44px;
+    border: none;
+    background-color: inherit;
+    margin-right: 14px;
+    background-image: url('../../public/assets/AppMembers/btn_left_disabled.svg');
+  }
+  p {
+    margin-right: 14px;
+    @include golosFont (16px, 300, 120%)
+  }
+  .members__buttons__right {
+    height: 44px;
+    width: 44px;
+    border: none;
+    background-color: inherit;
+    background-image: url('../../public/assets/AppMembers/btn_right.svg');
+    &:hover {
+      background-image: url('../../public/assets/AppMembers/btn_right_hover.svg');
+    }
+  }
+  .members__buttons__right-disabled {
+    height: 44px;
+    width: 44px;
+    border: none;
+    background-color: inherit;
+    background-image: url('../../public/assets/AppMembers/btn_right_disabled.svg');
+  }
+}
+.members__people {
+  margin: 0 auto;
+  margin-bottom: 140px;
+  max-width: 1020px;
+  overflow: hidden;
+  @include respond-to(mobile) {
+    margin-bottom: 20px;
+  }
+  .members__people__inner {
+    margin: 0 auto;
+    display: flex;
+    transition: all ease .5s;
+  }
+  .members__people__item {
+    display: inline-flex;
+    flex-direction: column;
+    flex-shrink: 0;
+    align-items: center;
+    max-width: 320px;
+    margin-right: 20px;
+    @include respond-to(mobile) {
+      margin:0 60px
+    }
+    img {
+      margin-bottom: 28px;
+    }
+    .members__people__item__name {
+      @include golosFont(24px, 600, 120%);
+      margin-bottom: 6px;
+    }
+    .members__people__item__title {
+      @include golosFont(20px, 300, 120%);
+      opacity: 60%;
+      margin-bottom: 20px;
+    }
+    button {
+      @include golosFont(16px, 500, 120%);
+      background-color: inherit;
+      color: #3057A2;
+      border: 1px solid #3057A2;
+      border-radius: 62px;
+      padding: 7px 12px;
+      &:hover {
+        background-color: #3057A2;
+        color: #ffffff;
+      }
+    }
+  }
+}
+@media(max-width: 1100px) {
+  .members__people {
+    max-width: 680px;
+  }
+}

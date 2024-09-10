@@ -1,0 +1,115 @@
+@import './mixins.scss';
+
+.header {
+  background-color: #E7DBD0;
+  height: 700px;
+  position: relative;
+  @include respond-to(mobile) {
+    height: 1000px;
+    overflow: hidden;
+  }
+}
+
+.header__bg-effect {
+  background-image: url('../../public/assets/AppHeader/bg-effect.png');
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  mix-blend-mode: color-burn;
+  z-index: 1;
+}
+.header__content_box {
+  position: relative;
+  z-index: 2;
+}
+.header__content_box__logo {
+  margin-bottom: 62px;
+}
+.header__content_box__city {
+  position: absolute;
+  left: -250px;
+  bottom: -87px;
+  @include respond-to(mobile) {
+    width: 100%;
+    left: 0;
+    bottom: -400px;
+  }
+}
+.header__content_box__text_box {
+  width: 542px;
+  position: relative;
+  z-index: 1;
+  @include respond-to(mobile) {
+    width: 100%;
+  }
+}
+.header__content_box__headline {
+ @include merryFont(60px, 300, 110%);
+ text-transform: uppercase;
+ margin-bottom: 24px;
+ @include respond-to(mobile) {
+  @include merryFont(48px, 300, 110%);
+ }
+}
+.header__content_box__text {
+  @include golosFont(18px, 300, 130%);
+  text-align: center;
+  margin-bottom: 40px;
+  @include respond-to(mobile) {
+    text-align: left;
+  }
+}
+.header__content_box__btn_box {
+  display: flex;
+  @include respond-to(mobile) {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+.header__content_box__left_btn {
+  background-color: #1F1F1F;
+  color: #FFFFFF;
+  border: 2px solid #1F1F1F;
+  border-radius: 9999px;
+  width: 263px;
+  padding: 20px;
+
+  @include golosFont(16px, 400, 130%);
+  margin-right: 16px;
+
+  &:hover {
+    background-color: #FBCE51;
+    color: #1F1F1F;
+    border-color: #FBCE51;
+  }
+
+  @include respond-to(mobile) {
+    width: 100%;
+    padding: 18px;
+    margin-right: 0;
+    margin-bottom: 14px;
+  }
+}
+.header__content_box__right_btn {
+  background-color: rgba(0, 0, 0, 0); 
+  color: #1F1F1F;
+  border: 2px solid #1F1F1F;
+  border-radius: 9999px;
+  width: 263px;
+  padding: 20px;
+
+  @include golosFont(16px, 400, 130%);
+
+  &:hover {
+    background-color: #1F1F1F;
+    color: #FFFFFF;
+    border-color: #1F1F1F;
+  }
+
+  @include respond-to(mobile) {
+    width: 100%;
+    padding: 18px;
+    margin-right: 0;
+    margin-bottom: 14px;
+  }
+}

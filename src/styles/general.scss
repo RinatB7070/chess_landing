@@ -1,0 +1,40 @@
+@import './mixins.scss';
+@import './AppHeader.scss';
+@import './RunningLine.scss';
+@import './AppMeta.scss';
+@import './AppInfo.scss';
+@import './AppMembers.scss';
+@import './AppFooter.scss';
+
+#app {
+  overflow: hidden;
+}
+.container {
+  box-sizing: border-box;
+  margin: 0 auto;
+  padding: 26px 72px;
+  max-width: 1366px;
+  @include respond-to(mobile) {
+    padding: 18px 20px;
+    max-width: 480px;
+  }
+}
+.text-center {
+  display:block;text-align:center;
+}
+body {
+  margin: 0;
+}
+h1, ul, p {
+  margin-block-start: 0;
+  margin-block-end: 0;
+  padding-inline-start: 0;
+}
+a {
+  display: inline-block;
+  text-decoration: none;
+  @include golosFont(18px, normal, 120%);
+  &:hover {
+    text-decoration: underline;
+  }
+}
