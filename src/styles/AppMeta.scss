@@ -10,6 +10,15 @@
     span {
       color: red
     }
+    @include respond-to(mobile) {
+      margin-right: 0;
+      @include merryFont(24px, 400, 135%);
+    }
+  }
+  img {
+    @include respond-to(mobile) {
+      display: none;
+    }
   }
 }
 .meta_two {
@@ -27,6 +36,10 @@
       margin-bottom: 60px;
       span {
         color: red;
+      }
+      @include respond-to(mobile) {
+        @include merryFont(24px, 400, 135%);
+        margin-bottom: 30px;
       }
     }
     .meta_two__content__table {

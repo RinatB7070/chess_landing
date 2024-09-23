@@ -48,7 +48,8 @@
  text-transform: uppercase;
  margin-bottom: 24px;
  @include respond-to(mobile) {
-  @include merryFont(48px, 300, 110%);
+  @include merryFont(40px, 300, 110%);
+
  }
 }
 .header__content_box__text {

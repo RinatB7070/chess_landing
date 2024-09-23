@@ -5,5 +5,9 @@
   p {
     @include golosFont (16px, 300, 120%);
     opacity: 60%;
+    @include respond-to(mobile) {
+      @include golosFont (12px, 300, 120%);
+    }
   }
+
 }

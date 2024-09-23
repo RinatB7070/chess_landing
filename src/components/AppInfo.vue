@@ -20,7 +20,7 @@
     <div v-else class="info_table-mobile">
       <img src="../../public/assets/AppInfo/plane-mobile.png" alt="plane" class="info_table-mobile-plane">
       <div class="info_table-mobile-wrapper">
-        <div class="info_table-mobile-inner"  :style="{'margin-left': '-' + (455 * (infoCounter)) + 'px'}">
+        <div class="info_table-mobile-inner"  :style="{'transform': 'translate' + '(' + ((-105 * (infoCounter))) + '%, 0)'}">
           <div class="info_table-mobile-item double-info">
             <div>
               <img src="../../public/assets/AppInfo/number1.png" alt="number" class="info_num">
