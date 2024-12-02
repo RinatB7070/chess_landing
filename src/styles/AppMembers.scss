@@ -23,9 +23,7 @@
   display: flex;
   align-items: center;
   @include respond-to(mobile) {
-    right: 85px;
-    top: 0;
-    bottom: -580px;
+    position: static;
   }
   .members__buttons__left {
     height: 44px;
@@ -80,6 +78,9 @@
     margin: 0 auto;
     display: flex;
     transition: all ease .5s;
+    @include respond-to(mobile) {
+      max-width: 320px;
+    }
   }
   .members__people__item {
     display: inline-flex;
@@ -90,6 +91,10 @@
     margin-right: 20px;
     @include respond-to(mobile) {
       padding-bottom: 40px;
+      margin-right: 21px;
+      &:first-child {
+        margin-left: 20px;
+      }
     }
     img {
       margin-bottom: 28px;

@@ -1,0 +1,26 @@
+Frontend
+
+  Node js
+    pixelperfect
+    Wordpress и аналоги
+  
+ 
+  html
+
+  css
+    SCSS/SASS
+    Адаптивная
+    Кроссбраузерность
+    Метрики
+
+  javascript
+    jQuery
+
+    Vue
+  
+  КЛИЕНТ-СЕРВЕРНОЕ ВЗАИМОДЕЙСТВИЕ
+    http запросы
+      
+  
+  ООП
+    SOLID

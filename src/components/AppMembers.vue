@@ -16,7 +16,7 @@
       </div>
     </div>
     <div class="members__people" v-if="isMobile">
-      <div class="members__people__inner" :style="{'transform': 'translate' + '(' + ((-44 * (memberCounter))) + '%, 0)'}">
+      <div class="members__people__inner" :style="{'transform': 'translate' + '(' + ((-94 * (memberCounter))) + '%, 0)'}">
         <div 
           class="members__people__item" 
           v-for="member in members"
